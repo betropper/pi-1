@@ -4,9 +4,14 @@ import blinky
 import time as t
 
 try:
-	while True:
-		blinky.gameshow(17,27,22,5,6,13,19,26)
+    while True:
+        blinky.gameshow(17,27,22,5,6,13,19,26)
+        answer = input("Try again? ")
+        if answer != "yes" or answer != "y":
+            print("See you later, then!")
+            
+            exit()
 
 except KeyboardInterrupt:
-	blinky.alloff(17,27,22,5,6,13,19,26)
-	exit	
+    blinky.alloff(17,27,22,5,6,13,19,26) 
+    exit()
